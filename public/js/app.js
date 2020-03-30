@@ -8,7 +8,7 @@ weatherForm.addEventListener('submit',(e)=>{
     if(!yourLocation){
         return console.log('Please Enter your location')
     }
-    fetch('http://localhost:3000/weather?address='+yourLocation).then((response)=>{
+    fetch('/weather?address='+yourLocation).then((response)=>{
         response.json().then((data)=>{
             if(data.error){
                 messageOne.textContent = 'Unable to find your location,please enter your correct address'
